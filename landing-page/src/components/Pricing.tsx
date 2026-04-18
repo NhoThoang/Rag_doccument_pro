@@ -54,9 +54,14 @@ export const Pricing = () => {
                     </li>
                   ))}
                 </ul>
-                <button className={p.highlight ? 'btn-primary w-full' : 'btn-secondary w-full'}>
+                <a 
+                  href="https://github.com/NhoThoang/Rag_doccument_pro" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className={`flex items-center justify-center ${p.highlight ? 'btn-primary w-full' : 'btn-secondary w-full'}`}
+                >
                   {p.cta}
-                </button>
+                </a>
               </motion.div>
             ))}
           </div>

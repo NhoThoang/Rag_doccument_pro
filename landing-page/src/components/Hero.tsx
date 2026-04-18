@@ -37,10 +37,22 @@ export const Hero = () => {
           transition={{ delay: 0.2 }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
         >
-          <button className="btn-primary">Start Your Free Trial</button>
-          <button className="btn-secondary flex items-center gap-2">
+          <a 
+            href="https://github.com/NhoThoang/Rag_doccument_pro" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="btn-primary"
+          >
+            Start Your Free Trial
+          </a>
+          <a 
+            href="https://github.com/NhoThoang/Rag_doccument_pro" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="btn-secondary flex items-center gap-2"
+          >
             <Play size={18} fill="currentColor" /> Learn More
-          </button>
+          </a>
         </motion.div>
 
         {/* Mockup Container */}
