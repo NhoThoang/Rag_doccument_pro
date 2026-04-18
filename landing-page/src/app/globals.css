@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dracula-bg: #282a36;
+  --color-dracula-current: #44475a;
+  --color-dracula-fg: #f8f8f2;
+  --color-dracula-comment: #6272a4;
+  --color-dracula-cyan: #8be9fd;
+  --color-dracula-green: #50fa7b;
+  --color-dracula-orange: #ffb86c;
+  --color-dracula-pink: #ff79c6;
+  --color-dracula-purple: #bd93f9;
+  --color-dracula-red: #ff5555;
+  --color-dracula-yellow: #f1fa8c;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Outfit", var(--font-sans);
+}
+
+:root {
+  --background: var(--color-dracula-bg);
+  --foreground: var(--color-dracula-fg);
+}
+
+body {
+  background-color: var(--color-dracula-bg);
+  color: var(--color-dracula-fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer utilities {
+  .glass {
+    background-color: rgba(68, 71, 90, 0.3);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(248, 248, 242, 0.1);
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-dracula-cyan via-dracula-purple to-dracula-pink;
+  }
+
+  .btn-primary {
+    @apply px-8 py-3 rounded-full font-bold bg-dracula-cyan text-dracula-bg hover:shadow-[0_0_20px_rgba(139,233,253,0.5)] transition-all duration-300 transform hover:scale-105 active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply px-8 py-3 rounded-full font-bold border-2 border-dracula-purple text-dracula-purple hover:bg-dracula-purple/10 transition-all duration-300 transform hover:scale-105 active:scale-95;
+  }
+}
