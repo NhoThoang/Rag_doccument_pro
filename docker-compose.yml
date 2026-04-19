@@ -66,32 +66,6 @@ services:
         hard: 65536
     networks:
       - app_network
-
-  minio:
-    image: nhothoang/minio:07092025
-    container_name: minio-server
-    restart: unless-stopped
-    env_file:
-      - ./config_docker_compose/minio.env
-    command: server /data --console-address ":9001"
-    ports:
-      - "9000:9000"
-      - "9001:9001"
-    volumes:
-      - minio_data:/data
-      - minio_cache:/cache
-    ulimits:
-      nofile:
-        soft: 65536
-        hard: 65536
-    networks:
-      - app_network
-    healthcheck:
-      test: [ "CMD", "curl", "-f", "http://localhost:9000/minio/health/live" ]
-      interval: 30s
-      timeout: 5s
-      retries: 3
-      start_period: 10s
   embedding-service:
     build:
       context: .
