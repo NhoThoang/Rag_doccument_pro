@@ -101,15 +101,15 @@ services:
     restart: unless-stopped
     shm_size: 2g
     env_file:
-      - ./config_docker_compose/embeding_bge_me.env
+      - ./config_docker_compose/embeding_bge_m3.env
     ports:
-      - "${PORT}:${PORT}"
+      - "6800:6800"
     volumes:
       - embeding_logs:/app/logs
     networks:
       - app_network
     healthcheck:
-      test: [ "CMD", "curl", "-f", "http://localhost:${PORT}/v1/health" ]
+      test: [ "CMD", "curl", "-f", "http://localhost:6800/v1/health" ]
       interval: 30s
       timeout: 10s
       retries: 3
