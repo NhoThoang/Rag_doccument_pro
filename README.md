@@ -62,14 +62,25 @@ make up
 
 Sau khi hệ thống phía Server đã chạy (`make up` thành công), bạn tiến hành cài đặt giao diện người dùng:
 
-1.  **Tải ứng dụng tại đây:** [Install_rag_documents.exe (v1.0.1)](https://github.com/NhoThoang/Rag_doccument_pro/releases/download/v1.0.1/Install_rag_documents.exe)
-2.  Mở ứng dụng và điền các thông số kết nối (khớp với file `.env`):
-    *   **POSTGRES_DB:** `dongybiphap`
-    *   **POSTGRES_USER:** `dongybiphap`
-    *   **POSTGRES_PASSWORD:** `kmhd16061994`
-    *   **POSTGRES_HOST:** `localhost` (hoặc IP server/WSL của bạn)
-    *   **POSTGRES_PORT:** `5432`
-3.  Bấm **Connect** để ứng dụng tiến hành kết nối, cài đặt và khởi tạo các bảng dữ liệu cần thiết.
+1.  **Tải ứng dụng tại đây:**
+    *   **Windows:** [Install_rag_documents.exe (v1.0.1)](https://github.com/NhoThoang/Rag_doccument_pro/releases/download/v1.0.1/Install_rag_documents.exe)
+    *   **macOS:** [Rag_documents-macos-latest.zip](https://github.com/NhoThoang/Rag_doccument_pro/releases/download/untagged-99b65f73734e5e2db274/Rag_documents-macos-latest.zip)
+    *   **Ubuntu:** [Rag_documents-ubuntu-latest.zip](https://github.com/NhoThoang/Rag_doccument_pro/releases/download/untagged-99b65f73734e5e2db274/Rag_documents-ubuntu-latest.zip)
+
+2.  **Hướng dẫn khởi chạy (macOS & Ubuntu):**
+    *   Tải file `.zip` tương ứng và giải nén.
+    *   Mở file `config/db_config.json` và cấu hình các thông số Database (khớp với file `.env` phía Server):
+        *   `host`, `port`, `user`, `password`, `database`.
+    *   Chạy file thực thi `Rag_documents` (có thể cần cấp quyền thực thi: `chmod +x Rag_documents`).
+
+3.  **Hướng dẫn khởi chạy (Windows):**
+    *   Mở ứng dụng và điền các thông số kết nối trực tiếp trên giao diện:
+        *   **POSTGRES_DB:** `dongybiphap`
+        *   **POSTGRES_USER:** `dongybiphap`
+        *   **POSTGRES_PASSWORD:** `kmhd16061994`
+        *   **POSTGRES_HOST:** `localhost` (hoặc IP server/WSL của bạn)
+        *   **POSTGRES_PORT:** `5432`
+    *   Bấm **Connect** để ứng dụng tiến hành kết nối, cài đặt và khởi tạo các bảng dữ liệu cần thiết.
 
 ---
 
