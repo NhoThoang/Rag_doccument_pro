@@ -70,12 +70,12 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: nhothoang/embeding-bge-m3:latest
-    container_name: embedding-service-bgem3
+    image: nhothoang/embeding-e5:latest
+    container_name: embedding-service-e5
     restart: unless-stopped
     shm_size: 2g
     env_file:
-      - ./config_docker_compose/embeding_bge_m3.env
+      - ./config_docker_compose/embeding_e5.env
     ports:
       - "6800:6800"
     volumes:
